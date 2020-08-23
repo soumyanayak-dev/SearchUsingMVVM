@@ -28,11 +28,11 @@ public class MainActivityViewModel extends ViewModel {
         return mIsViewingSearch;
     }
 
-    public void setIsQueryingSearch(boolean mIsQueryingRecipes) {
-        this.mIsQueryingSearch = mIsQueryingRecipes;
+    public void setIsQueryingSearch(boolean mIsQueryingSearch) {
+        this.mIsQueryingSearch = mIsQueryingSearch;
     }
 
-    public void searchRecipesApi(String query){
+    public void searchApi(String query){
         mIsViewingSearch = true;
         mSearchRepository.searchApi(query);
         mIsQueryingSearch = true;

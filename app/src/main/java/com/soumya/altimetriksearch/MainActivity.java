@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mSearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                mMainActivityViewModel.searchRecipesApi(query);
+                mMainActivityViewModel.searchApi(query);
                 mSearchView.clearFocus();
                 return false;
             }
@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onItemSelected(AdapterView<?> arg0, View arg1, int position, long id) {
         initRecyclerView();
-        mMainActivityViewModel.searchRecipesApi(spinner.getSelectedItem().toString());
+        mMainActivityViewModel.searchApi(spinner.getSelectedItem().toString());
         mSearchView.clearFocus();
     }
     @Override
